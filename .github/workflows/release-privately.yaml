@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   binaries:
-    runs-on: depot-ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: ruby/setup-ruby@v1
@@ -27,7 +27,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   docker:
-    runs-on: depot-ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - name: Get tag name
